@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root{
+    /* Primary Color */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral Color */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+.bd-container{
+    margin: 0 1rem;
+    max-width: 1240px;
+}
+
+body{
+    background: url('/Assets/images/pattern-background-desktop.svg') no-repeat center;
+    background-position: top;
+    background-size: contain;
+    background-color: var(--Pale-blue);
+}
+
+.order-container{
+    display: flex;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-card{
+    width:100%;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
+    border-radius:  20px;
+    margin: auto;
+    background-color: #fff;
+}
+
+ img{
+    width: 100%;
+    border-radius: 20px 20px 0 0 ;
+}
+
+.order-card-info{
+    text-align: center;
+    padding: 30px;
+   
+}
+
+.order-card-info strong{
+    font-size: 1.6rem;
+    color: var(--Dark-blue);
+}
+
+.order-card-info p{
+    margin: 15px auto;
+    max-width: 280px;
+    color: var(--Desaturated-blue);
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+/* Anual Plan Card*/
+.order-card-plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 15px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+}
+
+.music-plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}   
+
+.music-plan div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.music-plan div strong{
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+a{
+    color: var(--Bright-blue);
+}
+
+ a:hover{
+    text-decoration: none;
+   opacity: 0.9;
+}
+
+
+.music-plan div span{
+    color: var(--Desaturated-blue);
+    font-size: 0.9rem;
+}
+/* Payment Buttons */
+button{
+    border: none;
+    outline: none;
+}
+
+.btn-confirm{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: var(--Bright-blue);
+    width: 100%;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 1px 10px 5px 3px var(--Pale-blue);
+}
+
+.btn-confirm:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-cancel{
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.btn-cancel:hover{
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--Dark-blue);
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background: url('/Assets/images/pattern-background-mobile.svg') no-repeat ;
+        background-position: top;
+        background-size: contain;
+        background-color: var(--Pale-blue);
+    }
+
+    .order-card-info{
+        padding: 25px 15px;
+    }
+
+    .order-card-info strong{
+        font-size: 1.2rem;
+    }
+
+    .order-card-info p{
+        max-width: 250px;
+    }
+
+    .order-card-plan{
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    .music-plan div strong, .music-plan div span{
+        font-size: 0.8rem;
+    }
+
+    a{
+        font-size: 0.7rem;
+    }
+   
+
+}
+
+
+@media screen and (min-width: 1240px) {
+    .bd-container{
+        margin: 1rem;
+    }
+}
